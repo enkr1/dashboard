@@ -13,12 +13,16 @@
             color: #333;
         }
         .container {
-            max-width: 900px;
+            width: 100%;
             margin: 0 auto;
             background: white;
             padding: 30px;
             border-radius: 10px;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            transition: box-shadow 0.3s ease;
+        }
+        .container:hover {
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
         }
         h1 {
             text-align: center;
@@ -49,42 +53,48 @@
             max-width: 100%;
             border-radius: 5px;
         }
+        .section-title {
+            margin-top: 40px;
+            color: #3056A4;
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>ENKR | TimeTrack</h1>
 
+        <h2 class="section-title">Stats in 7 Days</h2> 
         <div class="embed">
-            <h2>Coding Activity (7 Days)</h2>
+            <h3>Coding Activity</h3> <!-- Changed to h3 -->
             <figure>
                 <embed src="https://wakatime.com/share/@enkr1/6d52b422-92e6-4ed4-b260-4cd32a7e28a2.svg" type="image/svg+xml"></embed>
             </figure>
         </div>
         
         <div class="embed">
-            <h2>Repo Badge</h2>
+            <h3>Languages</h3> <!-- Changed to h3 -->
             <figure>
-                <img src="https://your-repo-badge-url" alt="Repo Badge">
+                <embed src="https://wakatime.com/share/@enkr1/80a7c911-df42-4315-8c92-00424b023472.svg" type="image/svg+xml"></embed>
             </figure>
         </div>
-        
+
+        <h2 class="section-title">Stats Overall</h2>
         <div class="embed">
-            <h2>Project Badge</h2>
+            <h3>Project Badge</h3> <!-- Changed to h3 -->
             <figure>
                 <img src="https://your-project-badge-url" alt="Project Badge">
             </figure>
         </div>
         
         <div class="embed">
-            <h2>Embeddable Chart</h2>
+            <h3>Embeddable Chart</h3> <!-- Changed to h3 -->
             <figure>
                 <img src="https://your-embeddable-chart-url" alt="Embeddable Chart">
             </figure>
         </div>
         
         <div class="embed">
-            <h2>Goals</h2>
+            <h3>Goals</h3> <!-- Changed to h3 -->
             <figure>
                 <img src="https://your-goals-url" alt="Goals">
             </figure>
