@@ -10,13 +10,14 @@ $base-font-size: 16px;
 
 // Variables for common design properties
 $container-max-width: 100rem; // 1200px
-$container-padding: 3rem;
+$container-padding-y: 1rem;
+$container-padding-x: 3rem;
 $container-border-radius: 0.625rem;
 $container-box-shadow: 0 0.125rem 0.625rem rgba(0, 0, 0, 0.1);
 $container-hover-box-shadow: 0 0.25rem 0.9375rem rgba(0, 0, 0, 0.15);
 
 $embed-margin-bottom: 1.875rem; // 30px
-$embed-border: 0.0625rem solid $accent-color; // 1px
+$embed-border: 1px solid $accent-color; // 1px
 $embed-padding: 0.8rem; // 12.8px
 $embed-padding-side: 3rem; // 48px
 $embed-border-radius: 0.625rem;
@@ -42,7 +43,7 @@ body {
   max-width: $container-max-width;
   margin: 0 auto;
   background: white;
-  padding: $container-padding;
+  padding: $container-padding-y $container-padding-x;
   border-radius: $container-border-radius;
   box-shadow: $container-box-shadow;
   transition: box-shadow 0.3s ease;
@@ -62,7 +63,7 @@ h1 {
   text-align: center;
   color: $primary-color;
   font-size: $heading1-font-size;
-  margin: 0 0 $heading-margin-bottom;
+  margin: 0;
 }
 
 h2,
