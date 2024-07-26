@@ -1,0 +1,109 @@
+// Variables for theme colors
+$primary-color: #3056A4;
+$secondary-color: #477FC0;
+$accent-color: #2CB6C1;
+$background-color: #f4f4f4;
+$text-color: #333;
+
+// Base font size for rem units
+$base-font-size: 16px;
+
+// Variables for common design properties
+$container-max-width: 100rem; // 1200px
+$container-padding: 3rem;
+$container-border-radius: 0.625rem;
+$container-box-shadow: 0 0.125rem 0.625rem rgba(0, 0, 0, 0.1);
+$container-hover-box-shadow: 0 0.25rem 0.9375rem rgba(0, 0, 0, 0.15);
+
+$embed-margin-bottom: 1.875rem; // 30px
+$embed-border: 0.0625rem solid $accent-color; // 1px
+$embed-padding: 0.8rem; // 12.8px
+$embed-padding-side: 3rem; // 48px
+$embed-border-radius: 0.625rem;
+$embed-hover-box-shadow: 0 0.25rem 0.9375rem rgba(0, 0, 0, 0.15);
+
+$heading-margin-bottom: 0.625rem;
+$heading1-font-size: 2.5rem;
+$heading2-font-size: 1.5rem;
+$heading3-font-size: 1.25rem;
+
+// Base styles
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 3rem;
+  background-color: $background-color;
+  color: $text-color;
+  line-height: 1.6;
+}
+
+.container {
+  width: 100%;
+  max-width: $container-max-width;
+  margin: 0 auto;
+  background: white;
+  padding: $container-padding;
+  border-radius: $container-border-radius;
+  box-shadow: $container-box-shadow;
+  transition: box-shadow 0.3s ease;
+
+  &:hover {
+    box-shadow: $container-hover-box-shadow;
+  }
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(18.75rem, 1fr)); // 300px
+    gap: 3rem;
+  }
+}
+
+h1 {
+  text-align: center;
+  color: $primary-color;
+  font-size: $heading1-font-size;
+  margin: 0 0 $heading-margin-bottom;
+}
+
+h2,
+h3 {
+  color: $secondary-color;
+}
+
+h2 {
+  font-size: $heading2-font-size;
+  margin-bottom: $heading-margin-bottom;
+}
+
+h3 {
+  font-size: $heading3-font-size;
+  margin-bottom: $heading-margin-bottom;
+}
+
+.embed {
+  margin-bottom: $embed-margin-bottom;
+  border: $embed-border;
+  padding: $embed-padding $embed-padding-side;
+  border-radius: $embed-border-radius;
+  transition: box-shadow 0.3s ease;
+
+  &:hover {
+    box-shadow: $embed-hover-box-shadow;
+  }
+
+  figure {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+
+    img,
+    embed {
+      max-width: 100%;
+      border-radius: 0.3125rem; // 5px
+    }
+  }
+}
+
+.section-title {
+  color: $primary-color;
+}
