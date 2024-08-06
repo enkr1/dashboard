@@ -1,25 +1,27 @@
 // Variables for theme colors
 $primary-color: #3056A4;
 $secondary-color: #477FC0;
-$accent-color: #2CB6C1; // chart's colour
-$background-color: #f4f4f4;
+$accent-color: #2cb7c1a5; // chart's color
 $text-color: #333;
+$background-color: #cbcbcb;
+$container-color: #fff;
+$embed-color: #fff;
 
 // Base font size for rem units
 $base-font-size: 16px;
 
 // Variables for common design properties
-$container-max-width: 100rem; // 1200px
+$container-max-width: 100rem;
 $container-padding-y: 1rem;
 $container-padding-x: 3rem;
 $container-border-radius: 0.625rem;
 $container-box-shadow: 0 0.125rem 0.625rem rgba(0, 0, 0, 0.1);
 $container-hover-box-shadow: 0 0.25rem 0.9375rem rgba(0, 0, 0, 0.15);
 
-$embed-margin-bottom: 1.875rem; // 30px
-$embed-border: 1px solid $accent-color; // 1px
-$embed-padding: 0.8rem; // 12.8px
-$embed-padding-side: 3rem; // 48px
+$embed-margin-bottom: 1.875rem;
+$embed-border: 0.0625rem solid $accent-color;
+$embed-padding: 0.8rem;
+$embed-padding-side: 3rem;
 $embed-border-radius: 0.625rem;
 $embed-hover-box-shadow: 0 0.25rem 0.9375rem rgba(0, 0, 0, 0.15);
 
@@ -32,38 +34,27 @@ $heading3-font-size: 1.25rem;
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
-  padding: 3rem;
+  padding: 1rem;
   background-color: $background-color;
   color: $text-color;
   line-height: 1.6;
 }
 
-.container {
-  width: 100%;
-  max-width: $container-max-width;
-  margin: 0 auto;
-  background: white;
-  padding: $container-padding-y $container-padding-x;
-  border-radius: $container-border-radius;
-  box-shadow: $container-box-shadow;
-  transition: box-shadow 0.3s ease;
-
-  &:hover {
-    box-shadow: $container-hover-box-shadow;
-  }
-
-  .grid-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(18.75rem, 1fr)); // 300px
-    gap: 3rem;
-  }
-}
-
 h1 {
   text-align: center;
-  color: $primary-color;
   font-size: $heading1-font-size;
   margin: 0;
+  color: $secondary-color;
+
+  &::first-letter {
+    color: $primary-color;
+  }
+
+  span {
+    color: $accent-color;
+    font-weight: normal;
+    font-size: $heading1-font-size - .5rem;
+  }
 }
 
 h2,
@@ -81,15 +72,44 @@ h3 {
   margin-bottom: $heading-margin-bottom;
 }
 
+.container {
+  width: 100%;
+  max-width: 93%;
+  margin: 1rem auto;
+  background: $container-color;
+  padding: $container-padding-y $container-padding-x;
+  border-radius: $container-border-radius;
+  box-shadow: $container-box-shadow;
+  transition: box-shadow 0.3s ease;
+
+  &:hover {
+    box-shadow: $container-hover-box-shadow;
+  }
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(18.75rem, 1fr));
+    gap: 3rem;
+  }
+
+  .wide-container {
+    figure {
+      width: 80%;
+      margin: auto;
+    }
+  }
+}
+
 .embed {
   margin-bottom: $embed-margin-bottom;
   border: $embed-border;
   padding: $embed-padding $embed-padding-side;
   border-radius: $embed-border-radius;
-  transition: box-shadow 0.3s ease;
-
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  background-color: $embed-color;
   &:hover {
     box-shadow: $embed-hover-box-shadow;
+    transform: scale(1.1); // Slightly enlarge the embed on hover
   }
 
   figure {
@@ -100,7 +120,7 @@ h3 {
     img,
     embed {
       max-width: 100%;
-      border-radius: 0.3125rem; // 5px
+      border-radius: 0.3125rem;
     }
   }
 }
