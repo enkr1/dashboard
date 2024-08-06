@@ -107,6 +107,7 @@ h3 {
   border-radius: $embed-border-radius;
   transition: box-shadow 0.3s ease, transform 0.3s ease;
   background-color: $embed-color;
+
   &:hover {
     box-shadow: $embed-hover-box-shadow;
     transform: scale(1.1); // Slightly enlarge the embed on hover
@@ -127,4 +128,19 @@ h3 {
 
 .section-title {
   color: $primary-color;
+}
+
+.notification {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  background: #fff;
+  padding: 1rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 0.5rem;
+  display: none;
+}
+
+.notification.visible {
+  display: block;
 }
