@@ -51,7 +51,7 @@ h1 {
   }
 
   span {
-    color: $accent-color;
+    color: #4f4f4f;
     font-weight: normal;
     font-size: $heading1-font-size - .5rem;
   }
@@ -110,7 +110,7 @@ h3 {
 
   &:hover {
     box-shadow: $embed-hover-box-shadow;
-    transform: scale(1.1); // Slightly enlarge the embed on hover
+    // transform: scale(1.1); // Slightly enlarge the embed on hover
   }
 
   figure {
@@ -132,12 +132,27 @@ h3 {
 
 // Links List
 #links-list {
-  margin: 0 0 1rem;
-  padding: 0;
+  position: fixed;
+  top: 0;
+  right: -16%;
+  border: 1px solid #ffffff;
+  padding: 1.3rem 1rem 1.3rem 3rem;
+  display: grid;
+  border-radius: $container-border-radius;
+  gap: 1rem;
+  background-color: #000000;
+  transition: .3s all ease-in-out;
+  margin: 0;
+  box-shadow: $container-box-shadow;
+  mix-blend-mode: luminosity;
+  // mix-blend-mode: difference;
 
-  li {
-    list-style: none;
-    margin-bottom: .8rem;
+  &:hover {
+    right: 0;
+  }
+
+  >div {
+    text-align: right;
 
     a {
       display: inline-block;

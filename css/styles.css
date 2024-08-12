@@ -17,7 +17,7 @@ h1::first-letter {
   color: #3056A4;
 }
 h1 span {
-  color: rgba(44, 183, 193, 0.6470588235);
+  color: #4f4f4f;
   font-weight: normal;
   font-size: 2rem;
 }
@@ -70,7 +70,6 @@ h3 {
 }
 .embed:hover {
   box-shadow: 0 0.25rem 0.9375rem rgba(0, 0, 0, 0.15);
-  transform: scale(1.1);
 }
 .embed figure {
   margin: 0;
@@ -88,14 +87,27 @@ h3 {
 }
 
 #links-list {
-  margin: 0 0 1rem;
-  padding: 0;
+  position: fixed;
+  top: 0;
+  right: -16%;
+  border: 1px solid #ffffff;
+  padding: 1.3rem 1rem 1.3rem 3rem;
+  display: grid;
+  border-radius: 0.625rem;
+  gap: 1rem;
+  background-color: #000000;
+  transition: 0.3s all ease-in-out;
+  margin: 0;
+  box-shadow: 0 0.125rem 0.625rem rgba(0, 0, 0, 0.1);
+  mix-blend-mode: luminosity;
 }
-#links-list li {
-  list-style: none;
-  margin-bottom: 0.8rem;
+#links-list:hover {
+  right: 0;
 }
-#links-list li a {
+#links-list > div {
+  text-align: right;
+}
+#links-list > div a {
   display: inline-block;
   padding: 0.3rem 1.1rem;
   color: #3056A4;
@@ -104,7 +116,7 @@ h3 {
   border-radius: 0.5rem;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
-#links-list li a:hover {
+#links-list > div a:hover {
   background-color: rgba(44, 183, 193, 0.6470588235);
   color: #fff;
 }
