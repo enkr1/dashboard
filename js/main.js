@@ -1,4 +1,7 @@
 const links = [
+  { name: "Feishu Docs", url: "https://bytedance.larkoffice.com/drive/home/" },
+  { name: "WakaTime", url: "https://wakatime.com/" },
+  // { name: "ByteNote", url: "https://bytedance.sg.larkoffice.com/docx/CWQLd04AWoKnFexPKB4lu44Xgie" },
   { name: "Google Finance", url: "https://www.google.com/finance/quote/SGD-MYR" },
   { name: "CIMB", url: "https://www.cimbclicks.com.sg/sgd-to-myr" },
   { name: "Google Analytics", url: "https://analytics.google.com/analytics/web/" },
@@ -11,6 +14,7 @@ const links = [
   { name: "Bloomberg", url: "https://www.bloomberg.com/" },
   { name: "CSDN", url: "https://www.csdn.net/" },
   { name: "Douyin", url: "https://www.douyin.com/discover" },
+  { name: "devcard", url: "https://app.daily.dev/devcard" },
   // { name: "GitHub", url: "https://github.com/" }
 ];
 
